@@ -1,36 +1,92 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Тест шапки – Смак Тістечка</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Смак Тістечка – Домашня пекарня</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
+  <!-- ХЕДЕР -->
   <header>
     <div class="container">
       <h1 class="logo">Смак Тістечка</h1>
       <nav>
         <ul class="nav-links">
-          <li><a href="#">Головна</a></li>
-          <li><a href="#">Про нас</a></li>
-          <li><a href="#">Контакти</a></li>
+          <li><a href="index.html">Головна</a></li>
+          <li><a href="about.html">Про нас</a></li>
+          <li><a href="products.html">Наші вироби</a></li>
+          <li><a href="gallery.html">Галерея</a></li>
+          <li><a href="contact.html">Контакти</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <div style="background: yellow; color: black; padding: 20px; text-align: center;">
-    DEBUG: Це просто тест, чи видно header
-  </div>
-
+  <!-- HERO -->
   <section class="hero">
-    <div class="hero-content">
-      <h1>Тестова сторінка</h1>
-      <p>Чи видно шапку?</p>
+    <div class="overlay">
+      <div class="hero-content">
+        <h1>Смак Тістечка</h1>
+        <p>Домашня випічка з душею</p>
+        <a href="#about" class="btn">Переглянути</a>
+      </div>
     </div>
   </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="about-content">
+      <div class="about-text">
+        <h2>Ми готуємо з любов’ю</h2>
+        <p>
+          У «Смак Тістечка» ми поєднуємо смак, тепло та візуальну естетику.
+          Наші десерти створюються вручну з натуральних інгредієнтів — так,
+          як це робили наші бабусі. Ідеально підходить для свят, подарунків та сімейного чаювання.
+        </p>
+        <a href="#gallery" class="btn">Наші вироби</a>
+      </div>
+      <div class="about-image">
+        <img src="img/about.jpg" alt="Пекарня" />
+      </div>
+    </div>
+  </section>
+
+  <!-- CASES -->
+  <section class="cases" id="gallery">
+    <h2>Наші кейси</h2>
+    <div class="cases-grid">
+      <div class="case-item">
+        <img src="img/case1.jpg" alt="Вітрина з десертами" />
+        <div class="case-caption">Сезонна вітрина</div>
+      </div>
+      <div class="case-item">
+        <img src="img/case2.jpg" alt="Торт на замовлення" />
+        <div class="case-caption">Іменинний торт</div>
+      </div>
+      <div class="case-item">
+        <img src="img/case3.jpg" alt="Кекси на свято" />
+        <div class="case-caption">Святкові кекси</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <h2>Зв’яжіться з нами</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Ваше ім’я" required />
+      <input type="email" placeholder="Ваш email" required />
+      <textarea rows="5" placeholder="Ваше повідомлення" required></textarea>
+      <button type="submit">Надіслати</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Смак Тістечка. Всі права захищено.</p>
+  </footer>
 
 </body>
 </html>
