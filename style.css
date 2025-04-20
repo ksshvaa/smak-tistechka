@@ -82,11 +82,6 @@ header {
   margin-bottom: 10px;
 }
 
-.hero-content p {
-  font-size: 1.3rem;
-  margin-bottom: 20px;
-}
-
 /* Кнопка */
 .btn {
   display: inline-block;
