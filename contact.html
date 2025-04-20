@@ -1,41 +1,96 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Контакти – Смак Тістечка</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .contact-page {
+      padding: 100px 10% 60px;
+      text-align: center;
+    }
+
+    .contact-page h2 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+    }
+
+    .contact-page p {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+    }
+
+    .contact-form {
+      max-width: 500px;
+      margin: 30px auto 0;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      padding: 14px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      resize: none;
+    }
+
+    .contact-form button {
+      padding: 12px;
+      font-size: 1rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      background-color: #fff;
+      color: #111;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background-color: #e3e3e3;
+    }
+  </style>
 </head>
 <body>
+
+  <!-- ХЕДЕР -->
   <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Головна</a></li>
-        <li><a href="about.html">Про нас</a></li>
-        <li><a href="products.html">Наші вироби</a></li>
-        <li><a href="gallery.html">Галерея</a></li>
-        <li><a href="contact.html">Контакти</a></li>
-      </ul>
-    </nav>
+    <div class="container">
+      <h1 class="logo">Смак Тістечка</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Головна</a></li>
+          <li><a href="about.html">Про нас</a></li>
+          <li><a href="products.html">Наші вироби</a></li>
+          <li><a href="gallery.html">Галерея</a></li>
+          <li><a href="contact.html" class="active">Контакти</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section class="intro">
-      <h1>Контакти</h1>
-      <p>Email: smak@tistechka.com</p>
-      <p>Instagram: @smak_tistechka</p>
+  <!-- КОНТЕНТ -->
+  <section class="contact-page">
+    <h2>Зв’яжіться з нами</h2>
+    <p>Email: <a href="mailto:smak@tistechka.com">smak@tistechka.com</a></p>
+    <p>Instagram: <a href="https://instagram.com/smak_tistechka" target="_blank">@smak_tistechka</a></p>
 
-      <form action="#" method="POST" style="max-width: 400px; margin: 0 auto;">
-        <label>Ім’я:<br><input type="text" name="name" required></label><br><br>
-        <label>Email:<br><input type="email" name="email" required></label><br><br>
-        <label>Повідомлення:<br><textarea name="message" rows="5" required></textarea></label><br><br>
-        <button type="submit">Надіслати</button>
-      </form>
-    </section>
-  </main>
+    <form class="contact-form">
+      <input type="text" placeholder="Ваше ім’я" required />
+      <input type="email" placeholder="Ваш Email" required />
+      <textarea rows="5" placeholder="Ваше повідомлення..." required></textarea>
+      <button type="submit">Надіслати</button>
+    </form>
+  </section>
 
+  <!-- FOOTER -->
   <footer>
-    <p>&copy; 2025 Смак Тістечка</p>
+    <p>&copy; 2025 Смак Тістечка. Всі права захищено.</p>
   </footer>
+
 </body>
 </html>
