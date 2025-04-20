@@ -1,34 +1,47 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Про нас – Смак Тістечка</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <!-- ХЕДЕР -->
   <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Головна</a></li>
-        <li><a href="about.html">Про нас</a></li>
-        <li><a href="products.html">Наші вироби</a></li>
-        <li><a href="gallery.html">Галерея</a></li>
-        <li><a href="contact.html">Контакти</a></li>
-      </ul>
-    </nav>
+    <div class="container">
+      <h1 class="logo">Смак Тістечка</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Головна</a></li>
+          <li><a href="about.html" class="active">Про нас</a></li>
+          <li><a href="products.html">Наші вироби</a></li>
+          <li><a href="gallery.html">Галерея</a></li>
+          <li><a href="contact.html">Контакти</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section class="intro">
-      <h1>Наша історія</h1>
-      <p>«Смак Тістечка» – це домашня пекарня, що народилась із любові до натуральної випічки та теплих традицій. Ми віримо, що кожен десерт повинен мати свою душу, як і кожна родина – свою улюблену страву.</p>
-      <p>Виготовляємо торти, тістечка, печиво та інші ласощі на замовлення – з любов’ю та якісними інгредієнтами.</p>
-    </section>
-  </main>
+  <!-- КОНТЕНТ СТОРІНКИ -->
+  <section class="about" style="padding-top: 160px;">
+    <div class="about-content">
+      <div class="about-text">
+        <h2>Наша історія</h2>
+        <p>«Смак Тістечка» — це більше ніж пекарня. Це мрія, що народилась на домашній кухні й перетворилась на справжню справу життя. Ми віримо в силу простих інгредієнтів, родинних рецептів і любові, яку відчуває кожен клієнт у наших тістечках.</p>
+        <p>Кожен виріб виготовляється вручну — без консервантів, без поспіху, з душею. Ми прагнемо дарувати радість і затишок через смак, аромат і зовнішній вигляд наших десертів.</p>
+      </div>
+      <div class="about-image">
+        <img src="img/about.jpg" alt="Команда пекарні" />
+      </div>
+    </div>
+  </section>
 
+  <!-- FOOTER -->
   <footer>
-    <p>&copy; 2025 Смак Тістечка</p>
+    <p>&copy; 2025 Смак Тістечка. Всі права захищено.</p>
   </footer>
+
 </body>
 </html>
