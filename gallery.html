@@ -1,40 +1,66 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Галерея – Смак Тістечка</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 60px 10%;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.4);
+    }
+
+    .gallery-grid h2 {
+      grid-column: 1 / -1;
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+  </style>
 </head>
 <body>
+
+  <!-- ХЕДЕР -->
   <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Головна</a></li>
-        <li><a href="about.html">Про нас</a></li>
-        <li><a href="products.html">Наші вироби</a></li>
-        <li><a href="gallery.html">Галерея</a></li>
-        <li><a href="contact.html">Контакти</a></li>
-      </ul>
-    </nav>
+    <div class="container">
+      <h1 class="logo">Смак Тістечка</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Головна</a></li>
+          <li><a href="about.html">Про нас</a></li>
+          <li><a href="products.html">Наші вироби</a></li>
+          <li><a href="gallery.html" class="active">Галерея</a></li>
+          <li><a href="contact.html">Контакти</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section class="intro">
-      <h1>Галерея смаколиків</h1>
-      <p>Наші улюблені торти та десерти:</p>
-      <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-        <img src="img/cake1.jpg" alt="Торт 1" style="width: 200px; height: 200px; object-fit: cover; border-radius: 10px;">
-        <img src="img/cake2.jpg" alt="Торт 2" style="width: 200px; height: 200px; object-fit: cover; border-radius: 10px;">
-        <img src="img/cake3.jpg" alt="Торт 3" style="width: 200px; height: 200px; object-fit: cover; border-radius: 10px;">
-        <img src="img/cake4.jpg" alt="Торт 4" style="width: 200px; height: 200px; object-fit: cover; border-radius: 10px;">
-        <img src="img/cake5.jpg" alt="Торт 5" style="width: 200px; height: 200px; object-fit: cover; border-radius: 10px;">
-      </div>
-    </section>
-  </main>
+  <!-- ГАЛЕРЕЯ -->
+  <section class="gallery-grid" style="padding-top: 160px;">
+    <h2>Галерея наших робіт</h2>
+    <img src="img/cake1.jpg" alt="Торт 1">
+    <img src="img/cake2.jpg" alt="Торт 2">
+    <img src="img/cake3.jpg" alt="Торт 3">
+    <img src="img/cake4.jpg" alt="Торт 4">
+    <img src="img/cake5.jpg" alt="Торт 5">
+  </section>
 
+  <!-- FOOTER -->
   <footer>
-    <p>&copy; 2025 Смак Тістечка</p>
+    <p>&copy; 2025 Смак Тістечка. Всі права захищено.</p>
   </footer>
+
 </body>
 </html>
