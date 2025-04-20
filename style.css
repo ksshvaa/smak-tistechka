@@ -53,9 +53,180 @@ header {
 
 .hero {
   height: 100vh;
-  background-color: #222;
+  background-image: url("img/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding-top: 140px; /* було 80px */
+}
+
+/* Overlay для затемнення фону */
+.overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+}
+
+/* Стилі hero-тексту */
+.hero-content {
   text-align: center;
+  color: #fff;
+  padding: 20px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+
+/* Кнопка */
+.btn {
+  display: inline-block;
+  background-color: #fff;
+  color: #111;
+  padding: 12px 28px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #e3e3e3;
+}
+
+/* Про нас */
+.about {
+  padding: 80px 10%;
+  background-color: #1a1a1a;
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.about-text {
+  flex: 1 1 400px;
+}
+
+.about-image {
+  flex: 1 1 400px;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+/* Кейси */
+.cases {
+  background-color: #121212;
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.cases h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.cases-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.case-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.case-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.case-item:hover img {
+  transform: scale(1.05);
+}
+
+.case-caption {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  color: #fff;
+  padding: 10px;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+/* Контакти */
+.contact {
+  background-color: #1a1a1a;
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 15px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  resize: none;
+}
+
+.contact-form button {
+  background-color: #fff;
+  color: #111;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #e3e3e3;
+}
+
+/* Footer */
+footer {
+  background-color: #0e0e0e;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #aaa;
 }
