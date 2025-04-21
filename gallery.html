@@ -48,7 +48,7 @@
   </header>
 
   <!-- ГАЛЕРЕЯ -->
-  <section class="gallery-grid" style="padding-top: 160px;">
+  <section class="gallery-grid fade-in" style="padding-top: 160px;">
     <h2>Галерея наших робіт</h2>
     <img src="img/cake1.jpg" alt="Торт 1">
     <img src="img/cake2.jpg" alt="Торт 2">
@@ -77,6 +77,24 @@
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+  <script>
+    const fadeEls = document.querySelectorAll('.fade-in');
+  
+    const appearOnScroll = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+  
+    fadeEls.forEach(el => {
+      appearOnScroll.observe(el);
+    });
   </script>
 
 </body>

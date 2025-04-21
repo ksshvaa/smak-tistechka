@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="uk">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Смак Тістечка – Домашня пекарня</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <title>Смак Тістечка – Домашня пекарня</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 <body>
 
   <!-- ХЕДЕР -->
@@ -25,7 +26,7 @@
   </header>
 
   <!-- HERO -->
-  <section class="hero">
+  <section class="hero fade-in">
     <div class="overlay">
       <div class="hero-content">
         <h1>Смак Тістечка</h1>
@@ -36,7 +37,7 @@
   </section>
 
   <!-- ABOUT -->
-  <section class="about" id="about">
+  <section class="about fade-in" id="about">
     <div class="about-content">
       <div class="about-text">
         <h2>Ми готуємо з любов’ю</h2>
@@ -54,7 +55,7 @@
   </section>
 
   <!-- CASES -->
-  <section class="cases" id="gallery">
+  <section class="cases fade-in" id="gallery">
     <h2>Наші кейси</h2>
     <div class="cases-grid">
       <div class="case-item">
@@ -73,7 +74,7 @@
   </section>
 
   <!-- CONTACT -->
-  <section class="contact" id="contact">
+  <section class="contact fade-in" id="contact">
     <h2>Зв’яжіться з нами</h2>
     <form class="contact-form">
       <input type="text" placeholder="Ваше ім’я" required />
@@ -103,6 +104,24 @@
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+  <script>
+    const fadeEls = document.querySelectorAll('.fade-in');
+  
+    const appearOnScroll = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+  
+    fadeEls.forEach(el => {
+      appearOnScroll.observe(el);
+    });
   </script>
 
 </body>

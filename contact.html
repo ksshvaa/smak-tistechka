@@ -74,17 +74,27 @@
   </header>
 
   <!-- КОНТЕНТ -->
-  <section class="contact-page">
+  <section class="contact fade-in" id="contact">
     <h2>Зв’яжіться з нами</h2>
-    <p>Email: <a href="mailto:smak@tistechka.com">smak@tistechka.com</a></p>
-    <p>Instagram: <a href="https://instagram.com/smak_tistechka" target="_blank">@smak_tistechka</a></p>
-
     <form class="contact-form">
       <input type="text" placeholder="Ваше ім’я" required />
-      <input type="email" placeholder="Ваш Email" required />
-      <textarea rows="5" placeholder="Ваше повідомлення..." required></textarea>
+      <input type="email" placeholder="Ваш email" required />
+      <textarea rows="5" placeholder="Ваше повідомлення" required></textarea>
       <button type="submit">Надіслати</button>
     </form>
+  
+    <!-- Інтерактивна мапа -->
+    <div style="margin-top: 40px;">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=... (повний код)"
+        width="100%"
+        height="300"
+        style="border:0; border-radius: 10px;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
   </section>
 
   <!-- FOOTER -->
@@ -107,6 +117,24 @@
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+  <script>
+    const fadeEls = document.querySelectorAll('.fade-in');
+  
+    const appearOnScroll = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+  
+    fadeEls.forEach(el => {
+      appearOnScroll.observe(el);
+    });
   </script>
 
 </body>
