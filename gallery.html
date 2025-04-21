@@ -59,8 +59,25 @@
 
   <!-- FOOTER -->
   <footer>
-    <p>&copy; 2025 Смак Тістечка. Всі права захищено.</p>
+    <p>&copy; 2025–<span id="year"></span> Смак Тістечка. Всі права захищено.</p>
   </footer>
 
+  <button id="scrollToTop" title="Вгору">↑</button>
+  <script>
+    const scrollToTopBtn = document.getElementById("scrollToTop");
+  
+    window.onscroll = function () {
+      scrollToTopBtn.style.display = (window.scrollY > 300) ? "block" : "none";
+    };
+  
+    scrollToTopBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+  
 </body>
 </html>
