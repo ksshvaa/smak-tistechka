@@ -1,19 +1,14 @@
 <!DOCTYPE html>
 <html lang="uk">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Перегляньте вироби пекарні Смак Тістечка — торти, капкейки, печиво та інші смаколики на будь-який смак.">
-    <meta name="keywords" content="десерти, вироби, торти, капкейки, печиво, солодощі, Смак Тістечка">
-    <meta name="author" content="Смак Тістечка">
-    <meta name="robots" content="index, follow">
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
-    <title>Наші вироби – Смак Тістечка</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Наші вироби – Смак Тістечка</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="stylesheet" href="style.css" />
+</head>
 <body>
 
-  <!-- ХЕДЕР -->
   <header>
     <div class="container">
       <h1 class="logo">Смак Тістечка</h1>
@@ -29,102 +24,39 @@
     </div>
   </header>
 
-  <!-- КОНТЕНТ -->
-  <section class="catalog fade-in" style="padding: 100px 10% 60px;">
-    <h2 style="text-align:center; margin-bottom: 40px;">Наші вироби</h2>
-  
-    <div class="product-category">
-      <h3>Торти</h3>
-      <div class="product-grid">
-        <div class="product-card">
-          <img src="img/chocolate-night.jpg" alt="Шоколадна ніч">
-          <h4>Торт "Шоколадна ніч"</h4>
-          <p>450 грн</p>
-          <button onclick="openOrder('Торт Шоколадна ніч')">Замовити</button>
-        </div>
-        <div class="product-card">
-          <img src="img/napoleon.jpg" alt="Наполеон">
-          <h4>Торт "Наполеон"</h4>
-          <p>420 грн</p>
-          <button onclick="openOrder('Торт Наполеон')">Замовити</button>
-        </div>
-        <div class="product-card">
-          <img src="img/three-milks.jpg" alt="Три молока">
-          <h4>Торт "Три молока"</h4>
-          <p>480 грн</p>
-          <button onclick="openOrder('Торт Три молока')">Замовити</button>
-        </div>
-      </div>
+  <main class="product-main fade-in" style="padding: 120px 10% 60px;">
+    <h2 class="section-title">Наші вироби</h2>
+    <div class="category-grid">
+      <a href="cakes.html" class="category-card">
+        <img src="img/cake1.jpg" alt="Торти">
+        <div class="category-title">Торти</div>
+      </a>
+      <a href="cupcakes.html" class="category-card">
+        <img src="img/cake3.jpg" alt="Капкейки та мафіни">
+        <div class="category-title">Капкейки та мафіни</div>
+      </a>
+      <a href="cookies.html" class="category-card">
+        <img src="img/cake2.jpg" alt="Домашнє печиво">
+        <div class="category-title">Домашнє печиво</div>
+      </a>
+      <a href="pies.html" class="category-card">
+        <img src="img/cake4.jpg" alt="Сезонні пироги">
+        <div class="category-title">Сезонні пироги</div>
+      </a>
+      <a href="bread.html" class="category-card">
+        <img src="img/cake5.jpg" alt="Хліб на заквасці">
+        <div class="category-title">Хліб на заквасці</div>
+      </a>
     </div>
-  
-    <!-- Додай аналогічні блоки для кожної категорії (Капкейки, Печиво, Пироги, Хліб) -->
-  
-  </section>
-  
-  <!-- Форма замовлення -->
-  <div id="orderModal" class="order-modal" style="display:none;">
-    <div class="order-form">
-      <h3>Оформити замовлення</h3>
-      <form>
-        <input type="text" id="productName" readonly />
-        <input type="text" placeholder="Ваше ім’я" required>
-        <input type="tel" placeholder="Телефон" required>
-        <textarea rows="4" placeholder="Коментар або побажання"></textarea>
-        <button type="submit">Надіслати</button>
-        <span class="close" onclick="closeOrder()">✖</span>
-      </form>
-    </div>
-  </div>
+  </main>
 
-  <!-- FOOTER -->
   <footer>
     <p>&copy; 2025–<span id="year"></span> Смак Тістечка. Всі права захищено.</p>
   </footer>
 
-  <button id="scrollToTop" title="Вгору">↑</button>
-  <script>
-    const scrollToTopBtn = document.getElementById("scrollToTop");
-  
-    window.onscroll = function () {
-      scrollToTopBtn.style.display = (window.scrollY > 100) ? "block" : "none";
-    };
-  
-    scrollToTopBtn.addEventListener("click", () => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-  </script>
-
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
-
-  <script>
-    const fadeEls = document.querySelectorAll('.fade-in');
-  
-    const appearOnScroll = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, {
-      threshold: 0.1
-    });
-  
-    fadeEls.forEach(el => {
-      appearOnScroll.observe(el);
-    });
-  </script>
-
-  <script>
-    function openOrder(productName) {
-      document.getElementById('orderModal').style.display = 'flex';
-      document.getElementById('productName').value = productName;
-    }
-    function closeOrder() {
-      document.getElementById('orderModal').style.display = 'none';
-    }
-    </script>
 
 </body>
 </html>
