@@ -30,23 +30,51 @@
   </header>
 
   <!-- КОНТЕНТ -->
-  <section class="about " style="padding-top: 160px;">
-    <div class="about-content">
-      <div class="about-text">
-        <h2>Що ми готуємо?</h2>
-        <ul style="font-size: 1.2rem; line-height: 1.8;">
-          <li>🍰 Торти — класичні, ягідні, шоколадні</li>
-          <li>🧁 Капкейки та мафіни — для свят і буднів</li>
-          <li>🍪 Домашнє печиво — з горішками, шоколадом, пряністю</li>
-          <li>🥧 Сезонні пироги — яблучні, вишневі, гарбузові</li>
-          <li>🍞 Хліб на заквасці — з хрусткою скоринкою</li>
-        </ul>
-      </div>
-      <div class="about-image">
-        <img src="img/products.jpg" alt="Асортимент десертів" />
+  <section class="catalog fade-in" style="padding: 100px 10% 60px;">
+    <h2 style="text-align:center; margin-bottom: 40px;">Наші вироби</h2>
+  
+    <div class="product-category">
+      <h3>Торти</h3>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="img/tort1.jpg" alt="Шоколадна ніч">
+          <h4>Торт "Шоколадна ніч"</h4>
+          <p>450 грн</p>
+          <button onclick="openOrder('Торт Шоколадна ніч')">Замовити</button>
+        </div>
+        <div class="product-card">
+          <img src="img/tort2.jpg" alt="Наполеон">
+          <h4>Торт "Наполеон"</h4>
+          <p>420 грн</p>
+          <button onclick="openOrder('Торт Наполеон')">Замовити</button>
+        </div>
+        <div class="product-card">
+          <img src="img/tort3.jpg" alt="Три молока">
+          <h4>Торт "Три молока"</h4>
+          <p>480 грн</p>
+          <button onclick="openOrder('Торт Три молока')">Замовити</button>
+        </div>
       </div>
     </div>
+  
+    <!-- Додай аналогічні блоки для кожної категорії (Капкейки, Печиво, Пироги, Хліб) -->
+  
   </section>
+  
+  <!-- Форма замовлення -->
+  <div id="orderModal" class="order-modal" style="display:none;">
+    <div class="order-form">
+      <h3>Оформити замовлення</h3>
+      <form>
+        <input type="text" id="productName" readonly />
+        <input type="text" placeholder="Ваше ім’я" required>
+        <input type="tel" placeholder="Телефон" required>
+        <textarea rows="4" placeholder="Коментар або побажання"></textarea>
+        <button type="submit">Надіслати</button>
+        <span class="close" onclick="closeOrder()">✖</span>
+      </form>
+    </div>
+  </div>
 
   <!-- FOOTER -->
   <footer>
@@ -87,6 +115,16 @@
       appearOnScroll.observe(el);
     });
   </script>
+
+  <script>
+    function openOrder(productName) {
+      document.getElementById('orderModal').style.display = 'flex';
+      document.getElementById('productName').value = productName;
+    }
+    function closeOrder() {
+      document.getElementById('orderModal').style.display = 'none';
+    }
+    </script>
 
 </body>
 </html>
