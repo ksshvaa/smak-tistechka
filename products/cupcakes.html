@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Капкейки та мафіни – Наші вироби</title>
+  <meta name="description" content="Смачні капкейки та мафіни – ідеальні для свят та щоденних радощів.">
+  <meta name="keywords" content="капкейки, мафіни, десерти, домашня випічка, солодощі">
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="icon" href="../favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1 class="logo">Смак Тістечка</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="../index.html">Головна</a></li>
+          <li><a href="../about.html">Про нас</a></li>
+          <li><a href="../products.html" class="active">Наші вироби</a></li>
+          <li><a href="../gallery.html">Галерея</a></li>
+          <li><a href="../contact.html">Контакти</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="product-page">
+    <h1 class="page-title">Капкейки та мафіни</h1>
+
+    <section class="product-grid">
+      <div class="product-card">
+        <img src="../img/case11.jpg" alt="Капкейк Малиновий" />
+        <h2>Капкейк “Малиновий”</h2>
+        <p>Вага: 100 г</p>
+        <p>Ціна: 90 грн</p>
+        <p>Легкий бісквіт із малиновим джемом і кремом зі свіжими ягодами.</p>
+        <button class="order-btn">Замовити</button>
+      </div>
+
+      <div class="product-card">
+        <img src="../img/case22.jpg" alt="Мафін Чорничний" />
+        <h2>Мафін “Чорничний”</h2>
+        <p>Вага: 110 г</p>
+        <p>Ціна: 85 грн</p>
+        <p>Ароматний мафін із чорницею та ванільною крихтою зверху.</p>
+        <button class="order-btn">Замовити</button>
+      </div>
+
+      <div class="product-card">
+        <img src="../img/case33.jpg" alt="Капкейк Шоколад-фісташка" />
+        <h2>Капкейк “Шоколад-фісташка”</h2>
+        <p>Вага: 120 г</p>
+        <p>Ціна: 95 грн</p>
+        <p>Насичений шоколадний смак у поєднанні з фісташковим кремом.</p>
+        <button class="order-btn">Замовити</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025–<span id="year"></span> Смак Тістечка. Всі права захищено.</p>
+  </footer>
+  
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

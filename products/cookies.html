@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Домашнє печиво – Наші вироби</title>
+  <meta name="description" content="Смачне домашнє печиво з натуральних інгредієнтів, створене з любов’ю.">
+  <meta name="keywords" content="печиво, домашнє печиво, випічка, солодке, десерт">
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="icon" href="../favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1 class="logo">Смак Тістечка</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="../index.html">Головна</a></li>
+          <li><a href="../about.html">Про нас</a></li>
+          <li><a href="../products.html" class="active">Наші вироби</a></li>
+          <li><a href="../gallery.html">Галерея</a></li>
+          <li><a href="../contact.html">Контакти</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header> 
+
+  <main class="product-page">
+    <h1 class="page-title">Домашнє печиво</h1>
+
+    <section class="product-grid">
+      <div class="product-card">
+        <img src="../img/cake21.jpg" alt="Вівсяне печиво з горіхами" />
+        <h2>Печиво “Вівсяне з горіхами”</h2>
+        <p>Вага: 300 г</p>
+        <p>Ціна: 120 грн</p>
+        <p>Хрустке вівсяне печиво з волоськими горіхами та медовим ароматом.</p>
+        <button class="order-btn">Замовити</button>
+      </div>
+
+      <div class="product-card">
+        <img src="../img/cake31.jpg" alt="Шоколадне печиво" />
+        <h2>Печиво “Шоколадне”</h2>
+        <p>Вага: 250 г</p>
+        <p>Ціна: 110 грн</p>
+        <p>Насичений смак какао, шматочки чорного шоколаду та хрустка текстура.</p>
+        <button class="order-btn">Замовити</button>
+      </div>
+
+      <div class="product-card">
+        <img src="../img/cake11.jpg" alt="Класичне пісочне печиво" />
+        <h2>Печиво “Класичне пісочне”</h2>
+        <p>Вага: 200 г</p>
+        <p>Ціна: 95 грн</p>
+        <p>Тане у роті, з ніжною текстурою та легким ароматом ванілі.</p>
+        <button class="order-btn">Замовити</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025–<span id="year"></span> Смак Тістечка. Всі права захищено.</p>
+  </footer>
+  
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

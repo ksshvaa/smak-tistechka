@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Сезонні пироги – Наші вироби</title>
+  <meta name="description" content="Смачні домашні пироги з сезонними начинками – ідеальні до чаю або кави.">
+  <meta name="keywords" content="пироги, домашні пироги, сезонна випічка, десерт">
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="icon" href="../favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1 class="logo">Смак Тістечка</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="../index.html">Головна</a></li>
+          <li><a href="../about.html">Про нас</a></li>
+          <li><a href="../products.html" class="active">Наші вироби</a></li>
+          <li><a href="../gallery.html">Галерея</a></li>
+          <li><a href="../contact.html">Контакти</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="product-page">
+    <h1 class="page-title">Сезонні пироги</h1>
+
+    <section class="product-grid">
+      <div class="product-card">
+        <img src="../img/cake6.jpg" alt="Пиріг з яблуками та корицею" />
+        <h2>Пиріг “Яблучний з корицею”</h2>
+        <p>Вага: 1.1 кг</p>
+        <p>Ціна: 460 грн</p>
+        <p>Класичний шарлотковий пиріг з кисло-солодкими яблуками та ароматом кориці.</p>
+        <button class="order-btn">Замовити</button>
+      </div>
+
+      <div class="product-card">
+        <img src="../img/cake7.jpg" alt="Пиріг з вишнею" />
+        <h2>Пиріг “Вишневий”</h2>
+        <p>Вага: 1.2 кг</p>
+        <p>Ціна: 490 грн</p>
+        <p>Соковитий пиріг з великою кількістю вишень у ніжному тісті.</p>
+        <button class="order-btn">Замовити</button>
+      </div>
+
+      <div class="product-card">
+        <img src="../img/cake8.jpg" alt="Пиріг з гарбузом та горіхами" />
+        <h2>Пиріг “Гарбузовий з горіхами”</h2>
+        <p>Вага: 1.3 кг</p>
+        <p>Ціна: 510 грн</p>
+        <p>Ніжна начинка з гарбуза, спецій та грецьких горіхів у хрусткій скоринці.</p>
+        <button class="order-btn">Замовити</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025–<span id="year"></span> Смак Тістечка. Всі права захищено.</p>
+  </footer>
+  
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

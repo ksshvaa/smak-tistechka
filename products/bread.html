@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Хліб на заквасці – Наші вироби</title>
+  <meta name="description" content="Домашній хліб на натуральній заквасці – свіжа випічка з хрусткою скоринкою.">
+  <meta name="keywords" content="хліб, закваска, домашній хліб, випічка, житній, пшеничний">
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="icon" href="../favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1 class="logo">Смак Тістечка</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="../index.html">Головна</a></li>
+          <li><a href="../about.html">Про нас</a></li>
+          <li><a href="../products.html" class="active">Наші вироби</a></li>
+          <li><a href="../gallery.html">Галерея</a></li>
+          <li><a href="../contact.html">Контакти</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="product-page">
+    <h1 class="page-title">Хліб на заквасці</h1>
+
+    <section class="product-grid">
+      <div class="product-card">
+        <img src="../img/cake9.jpg" alt="Пшеничний хліб на заквасці" />
+        <h2>Хліб “Пшеничний”</h2>
+        <p>Вага: 500 г</p>
+        <p>Ціна: 65 грн</p>
+        <p>Свіжоспечений хліб на заквасці з пшеничного борошна, з м’яким м’якушем і рум’яною скоринкою.</p>
+        <button class="order-btn">Замовити</button>
+      </div>
+
+      <div class="product-card">
+        <img src="../img/cake10.jpg" alt="Житній хліб з насінням" />
+        <h2>Хліб “Житній з насінням”</h2>
+        <p>Вага: 600 г</p>
+        <p>Ціна: 70 грн</p>
+        <p>Насичений житній смак із додаванням насіння соняшника та льону.</p>
+        <button class="order-btn">Замовити</button>
+      </div>
+
+      <div class="product-card">
+        <img src="../img/cake13.jpg" alt="Хліб з оливками" />
+        <h2>Хліб “З оливками”</h2>
+        <p>Вага: 550 г</p>
+        <p>Ціна: 75 грн</p>
+        <p>Незвичайний ароматний хліб з оливками – ідеальний для сніданків або закусок.</p>
+        <button class="order-btn">Замовити</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025–<span id="year"></span> Смак Тістечка. Всі права захищено.</p>
+  </footer>
+  
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
