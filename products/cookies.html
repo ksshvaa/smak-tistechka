@@ -18,44 +18,49 @@
           <li><a href="../index.html">Головна</a></li>
           <li><a href="../about.html">Про нас</a></li>
           <li><a href="../products.html" class="active">Наші вироби</a></li>
-          <li><a href="../gallery.html">Галерея</a></li>
           <li><a href="../contact.html">Контакти</a></li>
         </ul>
       </nav>
     </div>
   </header> 
 
-  <main class="product-page">
-    <h1 class="page-title">Домашнє печиво</h1>
+  <main class="product-main">
+    <div class="main-container">
+      <h2 class="section-title">Домашнє печиво</h2>
 
-    <section class="product-grid">
-      <div class="product-card">
-        <img src="../img/cake21.jpg" alt="Вівсяне печиво з горіхами" />
-        <h2>Печиво “Вівсяне з горіхами”</h2>
-        <p>Вага: 300 г</p>
-        <p>Ціна: 120 грн</p>
-        <p>Хрустке вівсяне печиво з волоськими горіхами та медовим ароматом.</p>
-        <button class="order-btn">Замовити</button>
-      </div>
+      <section class="product-grid">
+        <div class="product-card">
+          <img src="../img/cake21.jpg" alt="Вівсяне печиво з горіхами" />
+          <h2>Печиво “Вівсяне з горіхами”</h2>
+          <p>Вага: 300 г</p>
+          <p>Ціна: 120 грн</p>
+          <p>Хрустке вівсяне печиво з волоськими горіхами та медовим ароматом.</p>
+          <button class="order-btn">Замовити</button>
+        </div>
 
-      <div class="product-card">
-        <img src="../img/cake31.jpg" alt="Шоколадне печиво" />
-        <h2>Печиво “Шоколадне”</h2>
-        <p>Вага: 250 г</p>
-        <p>Ціна: 110 грн</p>
-        <p>Насичений смак какао, шматочки чорного шоколаду та хрустка текстура.</p>
-        <button class="order-btn">Замовити</button>
-      </div>
+        <div class="product-card">
+          <img src="../img/cake31.jpg" alt="Шоколадне печиво" />
+          <h2>Печиво “Шоколадне”</h2>
+          <p>Вага: 250 г</p>
+          <p>Ціна: 110 грн</p>
+          <p>Насичений смак какао, шматочки чорного шоколаду та хрустка текстура.</p>
+          <button class="order-btn">Замовити</button>
+        </div>
 
-      <div class="product-card">
-        <img src="../img/cake11.jpg" alt="Класичне пісочне печиво" />
-        <h2>Печиво “Класичне пісочне”</h2>
-        <p>Вага: 200 г</p>
-        <p>Ціна: 95 грн</p>
-        <p>Тане у роті, з ніжною текстурою та легким ароматом ванілі.</p>
-        <button class="order-btn">Замовити</button>
+        <div class="product-card">
+          <img src="../img/cake11.jpg" alt="Класичне пісочне печиво" />
+          <h2>Печиво “Класичне пісочне”</h2>
+          <p>Вага: 200 г</p>
+          <p>Ціна: 95 грн</p>
+          <p>Тане у роті, з ніжною текстурою та легким ароматом ванілі.</p>
+          <button class="order-btn">Замовити</button>
+        </div>
+      </section>
+
+      <div style="text-align: center;">
+        <a href="../products.html" class="btn back-btn">← Назад до каталогу</a>
       </div>
-    </section>
+    </div>
   </main>
 
   <footer>
@@ -65,5 +70,41 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const orderButtons = document.querySelectorAll('.order-btn');
+      const modal = document.getElementById('orderModal');
+      const closeBtn = document.getElementById('closeModal');
+  
+      orderButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          modal.style.display = 'flex';
+        });
+      });
+  
+      closeBtn.addEventListener('click', () => {
+        modal.style.display = 'none';
+      });
+  
+      window.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          modal.style.display = 'none';
+        }
+      });
+    });
+  </script>
+
+  <div class="order-modal" id="orderModal" style="display: none;">
+    <form class="order-form">
+      <span class="close" id="closeModal">&times;</span>
+      <h3>Оформити замовлення</h3>
+      <input type="text" placeholder="Ваше ім’я" required>
+      <input type="tel" placeholder="Номер телефону" required>
+      <textarea placeholder="Коментар до замовлення (необов’язково)" rows="3"></textarea>
+      <button type="submit">Надіслати</button>
+    </form>
+  </div>
+
 </body>
 </html>

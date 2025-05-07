@@ -7,7 +7,7 @@
   <meta name="description" content="Домашні торти з нашої пекарні – смачні, свіжі та естетичні.">
   <meta name="keywords" content="торти, домашні торти, випічка, десерти, пекарня">
   <link rel="stylesheet" href="../style.css" />
-  <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="../favicon.ico" type="image/x-icon">
 </head>
 <body>
   <header>
@@ -18,19 +18,19 @@
           <li><a href="../index.html">Головна</a></li>
           <li><a href="../about.html">Про нас</a></li>
           <li><a href="../products.html" class="active">Наші вироби</a></li>
-          <li><a href="../gallery.html">Галерея</a></li>
           <li><a href="../contact.html">Контакти</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main class="product-page">
-    <div class="container">
-      <h1 class="page-title">Торти</h1>
+  <main class="product-main">
+    <div class="main-container">
+      <h2 class="section-title">Торти</h2>
+
       <section class="product-grid">
         <div class="product-card">
-          <img src="../img/images/chocolate-night.jpg" alt="Торт Чорна ніч" />
+          <img src="../img/chocolate-night.jpg" alt="Торт Чорна ніч" />
           <h2>Торт “Чорна ніч”</h2>
           <p>Вага: 1.2 кг</p>
           <p>Ціна: 550 грн</p>
@@ -39,7 +39,7 @@
         </div>
       
         <div class="product-card">
-          <img src="../img/images/napoleon.jpg" alt="Торт Наполеон" />
+          <img src="../img/napoleon.jpg" alt="Торт Наполеон" />
           <h2>Торт “Наполеон”</h2>
           <p>Вага: 1 кг</p>
           <p>Ціна: 480 грн</p>
@@ -48,7 +48,7 @@
         </div>
       
         <div class="product-card">
-          <img src="../img/images/three-milks.jpg" alt="Торт Три молока" />
+          <img src="../img/three-milks.jpg" alt="Торт Три молока" />
           <h2>Торт “Три молока”</h2>
           <p>Вага: 1.3 кг</p>
           <p>Ціна: 590 грн</p>
@@ -56,6 +56,10 @@
           <button class="order-btn">Замовити</button>
         </div>
       </section>
+
+      <div style="text-align: center;">
+        <a href="../products.html" class="btn back-btn">← Назад до каталогу</a>
+      </div>
     </div>  
   </main>
 
@@ -66,5 +70,41 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const orderButtons = document.querySelectorAll('.order-btn');
+      const modal = document.getElementById('orderModal');
+      const closeBtn = document.getElementById('closeModal');
+  
+      orderButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          modal.style.display = 'flex';
+        });
+      });
+  
+      closeBtn.addEventListener('click', () => {
+        modal.style.display = 'none';
+      });
+  
+      window.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          modal.style.display = 'none';
+        }
+      });
+    });
+  </script>
+
+  <div class="order-modal" id="orderModal" style="display: none;">
+    <form class="order-form">
+      <span class="close" id="closeModal">&times;</span>
+      <h3>Оформити замовлення</h3>
+      <input type="text" placeholder="Ваше ім’я" required>
+      <input type="tel" placeholder="Номер телефону" required>
+      <textarea placeholder="Коментар до замовлення (необов’язково)" rows="3"></textarea>
+      <button type="submit">Надіслати</button>
+    </form>
+  </div>
+
 </body>
 </html>

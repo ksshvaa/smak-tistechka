@@ -18,44 +18,50 @@
           <li><a href="../index.html">Головна</a></li>
           <li><a href="../about.html">Про нас</a></li>
           <li><a href="../products.html" class="active">Наші вироби</a></li>
-          <li><a href="../gallery.html">Галерея</a></li>
           <li><a href="../contact.html">Контакти</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main class="product-page">
-    <h1 class="page-title">Капкейки та мафіни</h1>
-
-    <section class="product-grid">
-      <div class="product-card">
-        <img src="../img/case11.jpg" alt="Капкейк Малиновий" />
-        <h2>Капкейк “Малиновий”</h2>
-        <p>Вага: 100 г</p>
-        <p>Ціна: 90 грн</p>
-        <p>Легкий бісквіт із малиновим джемом і кремом зі свіжими ягодами.</p>
-        <button class="order-btn">Замовити</button>
+  <main class="product-main">
+    <div class="main-container">
+      <h2 class="section-title">Капкейки та мафіни</h2>
+  
+      <section class="product-grid">
+        <!-- картки -->
+        <div class="product-card">
+          <img src="../img/case11.jpg" alt="Капкейк Малиновий" />
+          <h2>Капкейк “Малиновий”</h2>
+          <p>Вага: 100 г</p>
+          <p>Ціна: 90 грн</p>
+          <p>Легкий бісквіт із малиновим джемом і кремом зі свіжими ягодами.</p>
+          <button class="order-btn">Замовити</button>
+        </div>
+  
+        <div class="product-card">
+          <img src="../img/case22.jpg" alt="Мафін Чорничний" />
+          <h2>Мафін “Чорничний”</h2>
+          <p>Вага: 110 г</p>
+          <p>Ціна: 85 грн</p>
+          <p>Ароматний мафін із чорницею та ванільною крихтою зверху.</p>
+          <button class="order-btn">Замовити</button>
+        </div>
+  
+        <div class="product-card">
+          <img src="../img/case33.jpg" alt="Капкейк Шоколад-фісташка" />
+          <h2>Капкейк “Шоколад-фісташка”</h2>
+          <p>Вага: 120 г</p>
+          <p>Ціна: 95 грн</p>
+          <p>Насичений шоколадний смак у поєднанні з фісташковим кремом.</p>
+          <button class="order-btn">Замовити</button>
+        </div>
+      </section>
+  
+      <div style="text-align: center;">
+        <a href="../products.html" class="btn back-btn">← Назад до каталогу</a>
       </div>
-
-      <div class="product-card">
-        <img src="../img/case22.jpg" alt="Мафін Чорничний" />
-        <h2>Мафін “Чорничний”</h2>
-        <p>Вага: 110 г</p>
-        <p>Ціна: 85 грн</p>
-        <p>Ароматний мафін із чорницею та ванільною крихтою зверху.</p>
-        <button class="order-btn">Замовити</button>
-      </div>
-
-      <div class="product-card">
-        <img src="../img/case33.jpg" alt="Капкейк Шоколад-фісташка" />
-        <h2>Капкейк “Шоколад-фісташка”</h2>
-        <p>Вага: 120 г</p>
-        <p>Ціна: 95 грн</p>
-        <p>Насичений шоколадний смак у поєднанні з фісташковим кремом.</p>
-        <button class="order-btn">Замовити</button>
-      </div>
-    </section>
+    </div>
   </main>
 
   <footer>
@@ -65,5 +71,41 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const orderButtons = document.querySelectorAll('.order-btn');
+      const modal = document.getElementById('orderModal');
+      const closeBtn = document.getElementById('closeModal');
+  
+      orderButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          modal.style.display = 'flex';
+        });
+      });
+  
+      closeBtn.addEventListener('click', () => {
+        modal.style.display = 'none';
+      });
+  
+      window.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          modal.style.display = 'none';
+        }
+      });
+    });
+  </script>
+
+  <div class="order-modal" id="orderModal" style="display: none;">
+    <form class="order-form">
+      <span class="close" id="closeModal">&times;</span>
+      <h3>Оформити замовлення</h3>
+      <input type="text" placeholder="Ваше ім’я" required>
+      <input type="tel" placeholder="Номер телефону" required>
+      <textarea placeholder="Коментар до замовлення (необов’язково)" rows="3"></textarea>
+      <button type="submit">Надіслати</button>
+    </form>
+  </div>
+
 </body>
 </html>

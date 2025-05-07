@@ -18,44 +18,49 @@
           <li><a href="../index.html">Головна</a></li>
           <li><a href="../about.html">Про нас</a></li>
           <li><a href="../products.html" class="active">Наші вироби</a></li>
-          <li><a href="../gallery.html">Галерея</a></li>
           <li><a href="../contact.html">Контакти</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main class="product-page">
-    <h1 class="page-title">Сезонні пироги</h1>
+  <main class="product-main">
+    <div class="main-container">
+      <h2 class="section-title">Сезонні пироги</h2>
 
-    <section class="product-grid">
-      <div class="product-card">
-        <img src="../img/cake6.jpg" alt="Пиріг з яблуками та корицею" />
-        <h2>Пиріг “Яблучний з корицею”</h2>
-        <p>Вага: 1.1 кг</p>
-        <p>Ціна: 460 грн</p>
-        <p>Класичний шарлотковий пиріг з кисло-солодкими яблуками та ароматом кориці.</p>
-        <button class="order-btn">Замовити</button>
-      </div>
+      <section class="product-grid">
+        <div class="product-card">
+          <img src="../img/cake6.jpg" alt="Пиріг з яблуками та корицею" />
+          <h2>Пиріг “Яблучний з корицею”</h2>
+          <p>Вага: 1.1 кг</p>
+          <p>Ціна: 460 грн</p>
+          <p>Класичний шарлотковий пиріг з кисло-солодкими яблуками та ароматом кориці.</p>
+          <button class="order-btn">Замовити</button>
+        </div>
 
-      <div class="product-card">
-        <img src="../img/cake7.jpg" alt="Пиріг з вишнею" />
-        <h2>Пиріг “Вишневий”</h2>
-        <p>Вага: 1.2 кг</p>
-        <p>Ціна: 490 грн</p>
-        <p>Соковитий пиріг з великою кількістю вишень у ніжному тісті.</p>
-        <button class="order-btn">Замовити</button>
-      </div>
+        <div class="product-card">
+          <img src="../img/cake7.jpg" alt="Пиріг з вишнею" />
+          <h2>Пиріг “Вишневий”</h2>
+          <p>Вага: 1.2 кг</p>
+          <p>Ціна: 490 грн</p>
+          <p>Соковитий пиріг з великою кількістю вишень у ніжному тісті.</p>
+          <button class="order-btn">Замовити</button>
+        </div>
 
-      <div class="product-card">
-        <img src="../img/cake8.jpg" alt="Пиріг з гарбузом та горіхами" />
-        <h2>Пиріг “Гарбузовий з горіхами”</h2>
-        <p>Вага: 1.3 кг</p>
-        <p>Ціна: 510 грн</p>
-        <p>Ніжна начинка з гарбуза, спецій та грецьких горіхів у хрусткій скоринці.</p>
-        <button class="order-btn">Замовити</button>
+        <div class="product-card">
+          <img src="../img/cake8.jpg" alt="Пиріг з гарбузом та горіхами" />
+          <h2>Пиріг “Гарбузовий з горіхами”</h2>
+          <p>Вага: 1.3 кг</p>
+          <p>Ціна: 510 грн</p>
+          <p>Ніжна начинка з гарбуза, спецій та грецьких горіхів у хрусткій скоринці.</p>
+          <button class="order-btn">Замовити</button>
+        </div>
+      </section>
+
+      <div style="text-align: center;">
+        <a href="../products.html" class="btn back-btn">← Назад до каталогу</a>
       </div>
-    </section>
+    </div>
   </main>
 
   <footer>
@@ -65,5 +70,41 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const orderButtons = document.querySelectorAll('.order-btn');
+      const modal = document.getElementById('orderModal');
+      const closeBtn = document.getElementById('closeModal');
+  
+      orderButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          modal.style.display = 'flex';
+        });
+      });
+  
+      closeBtn.addEventListener('click', () => {
+        modal.style.display = 'none';
+      });
+  
+      window.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          modal.style.display = 'none';
+        }
+      });
+    });
+  </script>
+
+  <div class="order-modal" id="orderModal" style="display: none;">
+    <form class="order-form">
+      <span class="close" id="closeModal">&times;</span>
+      <h3>Оформити замовлення</h3>
+      <input type="text" placeholder="Ваше ім’я" required>
+      <input type="tel" placeholder="Номер телефону" required>
+      <textarea placeholder="Коментар до замовлення (необов’язково)" rows="3"></textarea>
+      <button type="submit">Надіслати</button>
+    </form>
+  </div>
+
 </body>
 </html>
