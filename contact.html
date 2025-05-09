@@ -1,16 +1,41 @@
 <!DOCTYPE html>
 <html lang="uk">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Зв’яжіться з пекарнею Смак Тістечка — контакти, форма замовлення, карта розташування у Львові.">
-    <meta name="keywords" content="контакти, замовити десерт, форма, пекарня, Смак Тістечка, Львів">
-    <meta name="author" content="Смак Тістечка">
-    <meta name="robots" content="index, follow">
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
-    <title>Контакти – Смак Тістечка</title>
-    <link rel="stylesheet" href="style.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Зв’яжіться з пекарнею Смак Тістечка — контакти, форма замовлення, карта розташування у Львові.">
+  <meta name="keywords" content="контакти, замовити десерт, форма, пекарня, Смак Тістечка, Львів">
+  <meta name="author" content="Смак Тістечка">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <title>Контакти – Смак Тістечка</title>
+  <link rel="stylesheet" href="style.css" />
   <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .wrapper {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    footer {
+      margin-top: auto;
+      background-color: #0e0e0e;
+      padding: 20px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+
     .contact-page {
       padding: 100px 10% 60px;
       text-align: center;
@@ -58,74 +83,88 @@
     .contact-form button:hover {
       background-color: #e3e3e3;
     }
+
+    .map-container {
+      margin-top: 30px;
+    }
+
+    .contact-info {
+      text-align: center;
+      margin: 40px 0 20px;
+    }
   </style>
 </head>
 <body>
+  <div class="wrapper">
 
-  <!-- ХЕДЕР -->
-  <header>
-    <div class="container">
-      <h1 class="logo">Смак Тістечка</h1>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html">Головна</a></li>
-          <li><a href="about.html">Про нас</a></li>
-          <li><a href="products.html">Наші вироби</a></li>
-          <li><a href="contact.html" class="active">Контакти</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+    <!-- ХЕДЕР -->
+    <header>
+      <div class="container">
+        <h1 class="logo">Смак Тістечка</h1>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="index.html">Головна</a></li>
+            <li><a href="about.html">Про нас</a></li>
+            <li><a href="products.html">Наші вироби</a></li>
+            <li><a href="contact.html" class="active">Контакти</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-  <!-- КОНТЕНТ -->
-  <section class="contact fade-in" id="contact">
-    <h2>Зв’яжіться з нами</h2>
-    <form class="contact-form">
-      <input type="text" placeholder="Ваше ім’я" required />
-      <input type="email" placeholder="Ваш email" required />
-      <textarea rows="5" placeholder="Ваше повідомлення" required></textarea>
-      <button type="submit">Надіслати</button>
-    </form>
-  
-    <!-- Інтерактивна мапа -->
-    <div style="margin-top: 40px;">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=... (повний код)"
-        width="100%"
-        height="300"
-        style="border:0; border-radius: 10px;"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
-    </div>
-  </section>
+    <!-- КОНТЕНТ -->
+    <main class="contact-page fade-in" id="contact">
+      <h2>Зв’яжіться з нами</h2>
+      <form class="contact-form">
+        <input type="text" placeholder="Ваше ім’я" required />
+        <input type="email" placeholder="Ваш email" required />
+        <textarea rows="5" placeholder="Ваше повідомлення" required></textarea>
+        <button type="submit">Надіслати</button>
+      </form>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>&copy; 2025–<span id="year"></span> Смак Тістечка. Всі права захищено.</p>
-  </footer>
+      <div class="contact-info">
+        <p><strong>Адреса:</strong> м. Львів, вул. Випічки, 12</p>
+        <p><strong>Телефон:</strong> +38 (067) 123-45-67</p>
+        <p><strong>Ел. пошта:</strong> info@smak-tistechka.com</p>
+      </div>
+
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2615.2370610343024!2d24.031360715679316!3d49.84195707939501!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add6d7c13cfa3%3A0xe0132bb973b34e5b!2z0JrQuNC10LHQvdGL0Lkg0JXQstC10YDRgtCw!5e0!3m2!1suk!2sua!4v1683635396804!5m2!1suk!2sua"
+          width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+      <h3 style="margin-top: 40px;">Залиште свій відгук або запитання:</h3>
+      <form class="contact-form">
+        <input type="text" placeholder="Ваше ім’я" required>
+        <input type="email" placeholder="Ел. пошта" required>
+        <textarea rows="4" placeholder="Ваше повідомлення" required></textarea>
+        <button type="submit">Надіслати</button>
+      </form>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>&copy; 2025–<span id="year"></span> Смак Тістечка. Всі права захищено.</p>
+    </footer>
+  </div>
 
   <button id="scrollToTop" title="Вгору">↑</button>
-  <script>
-    const scrollToTopBtn = document.getElementById("scrollToTop");
-  
-    window.onscroll = function () {
-      scrollToTopBtn.style.display = (window.scrollY > 100) ? "block" : "none";
-    };
-  
-    scrollToTopBtn.addEventListener("click", () => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-  </script>
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+    const scrollToTopBtn = document.getElementById("scrollToTop");
 
-  <script>
+    window.onscroll = function () {
+      scrollToTopBtn.style.display = (window.scrollY > 100) ? "block" : "none";
+    };
+
+    scrollToTopBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
     const fadeEls = document.querySelectorAll('.fade-in');
-  
     const appearOnScroll = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -135,11 +174,11 @@
     }, {
       threshold: 0.1
     });
-  
+
     fadeEls.forEach(el => {
       appearOnScroll.observe(el);
     });
   </script>
-
+  
 </body>
 </html>

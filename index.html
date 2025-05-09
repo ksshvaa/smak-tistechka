@@ -11,129 +11,149 @@
     <title>Смак Тістечка – Домашня пекарня</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-<body>
+  <body>
+    <div class="wrapper">
+      <!-- ХЕДЕР -->
+      <header>
+        <div class="container">
+          <h1 class="logo">Смак Тістечка</h1>
+          <nav>
+            <ul class="nav-links">
+              <li><a href="index.html">Головна</a></li>
+              <li><a href="about.html">Про нас</a></li>
+              <li><a href="products.html">Наші вироби</a></li>
+              <li><a href="contact.html">Контакти</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
 
-  <!-- ХЕДЕР -->
-  <header>
-    <div class="container">
-      <h1 class="logo">Смак Тістечка</h1>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html">Головна</a></li>
-          <li><a href="about.html">Про нас</a></li>
-          <li><a href="products.html">Наші вироби</a></li>
-          <li><a href="contact.html">Контакти</a></li>
-        </ul>
-      </nav>
+      <!-- КОНТЕНТ САЙТУ -->
+      <main>
+        <!-- HERO -->
+        <section class="hero fade-in">
+          <div class="overlay">
+            <div class="hero-content">
+              <h1>Смак Тістечка</h1>
+              <p>Домашня випічка з душею</p>
+              <a href="#gallery" class="btn">Переглянути</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section class="about fade-in" id="about">
+          <div class="about-content">
+            <div class="about-text">
+              <h2>Ми готуємо з любов’ю</h2>
+              <p>
+                У «Смак Тістечка» ми поєднуємо смак, тепло та візуальну естетику.
+                Наші десерти створюються вручну з натуральних інгредієнтів — так,
+                як це робили наші бабусі. Ідеально підходить для свят, подарунків та сімейного чаювання.
+              </p>
+              <a href="#gallery" class="btn">Наші вироби</a>
+            </div>
+            <div class="about-image">
+              <img src="img/about.jpg" alt="Пекарня" />
+            </div>
+          </div>
+        </section>
+
+        <!-- CASES -->
+        <section class="cases fade-in" id="gallery">
+          <h2>Наші кейси</h2>
+          <div class="cases-grid">
+            <a href="products/cakes.html" class="case-item">
+              <img src="img/case1.jpg" alt="Вітрина з десертами" />
+              <div class="case-caption">Торти</div>
+            </a>
+            <a href="products/cookies.html" class="case-item">
+              <img src="img/case2.jpg" alt="Торт на замовлення" />
+              <div class="case-caption">Домашнє печиво</div>
+            </a>
+            <a href="products/pies.html" class="case-item">
+              <img src="img/case3.jpg" alt="Кекси на свято" />
+              <div class="case-caption">Сезонні пироги</div>
+            </a>
+            <a href="products/cupcakes.html" class="case-item">
+              <img src="img/case55.jpg" alt="Капкейки" />
+              <div class="case-caption">Капкейки та мафіни</div>
+            </a>
+            <a href="products/bread.html" class="case-item">
+              <img src="img/case44.jpg" alt="Хліб" />
+              <div class="case-caption">Хліб на заквасці</div>
+            </a>
+          </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="contact fade-in" id="contact">
+          <h2>Зв’яжіться з нами</h2>
+          <form class="contact-form">
+            <input type="text" placeholder="Ваше ім’я" required />
+            <input type="email" placeholder="Ваш email" required />
+            <textarea rows="5" placeholder="Ваше повідомлення" required></textarea>
+            <button type="submit">Надіслати</button>
+          </form>
+
+          <div class="contact-info" style="margin-top: 40px;">
+            <p><strong>Адреса:</strong> м. Львів, вул. Випічки, 12</p>
+            <p><strong>Телефон:</strong> +38 (067) 123-45-67</p>
+            <p><strong>Ел. пошта:</strong> info@smak-tistechka.com</p>
+          </div>
+
+          <div class="map-container" style="margin-top: 30px;">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2615.2370610343024!2d24.031360715679316!3d49.84195707939501!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add6d7c13cfa3%3A0xe0132bb973b34e5b!2z0JrQuNC10LHQvdGL0Lkg0JXQstC10YDRgtCw!5e0!3m2!1suk!2sua!4v1683635396804!5m2!1suk!2sua"
+              width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+
+          <h3 style="margin-top: 40px;">Залиште свій відгук або запитання:</h3>
+          <form class="contact-form">
+            <input type="text" placeholder="Ваше ім’я" required>
+            <input type="email" placeholder="Ел. пошта" required>
+            <textarea rows="4" placeholder="Ваше повідомлення" required></textarea>
+            <button type="submit">Надіслати</button>
+          </form>
+        </section>
+      </main>
+
+      <!-- FOOTER -->
+      <footer>
+        <p>&copy; 2025–<span id="year"></span> Смак Тістечка. Всі права захищено.</p>
+      </footer>
     </div>
-  </header>
 
-  <!-- HERO -->
-  <section class="hero fade-in">
-    <div class="overlay">
-      <div class="hero-content">
-        <h1>Смак Тістечка</h1>
-        <p>Домашня випічка з душею</p>
-        <a href="#gallery" class="btn">Переглянути</a>
-      </div>
-    </div>
-  </section>
+    <button id="scrollToTop" title="Вгору">↑</button>
 
-  <!-- ABOUT -->
-  <section class="about fade-in" id="about">
-    <div class="about-content">
-      <div class="about-text">
-        <h2>Ми готуємо з любов’ю</h2>
-        <p>
-          У «Смак Тістечка» ми поєднуємо смак, тепло та візуальну естетику.
-          Наші десерти створюються вручну з натуральних інгредієнтів — так,
-          як це робили наші бабусі. Ідеально підходить для свят, подарунків та сімейного чаювання.
-        </p>
-        <a href="#gallery" class="btn">Наші вироби</a>
-      </div>
-      <div class="about-image">
-        <img src="img/about.jpg" alt="Пекарня" />
-      </div>
-    </div>
-  </section>
-
-<!-- CASES -->
-<section class="cases fade-in" id="gallery">
-  <h2>Наші кейси</h2>
-  <div class="cases-grid">
-    <a href="products/cakes.html" class="case-item">
-      <img src="img/case1.jpg" alt="Вітрина з десертами" />
-      <div class="case-caption">Торти</div>
-    </a>
-    <a href="products/cookies.html" class="case-item">
-      <img src="img/case2.jpg" alt="Торт на замовлення" />
-      <div class="case-caption">Домашнє печиво</div>
-    </a>
-    <a href="products/pies.html" class="case-item">
-      <img src="img/case3.jpg" alt="Кекси на свято" />
-      <div class="case-caption">Сезонні пироги</div>
-    </a>
-    <a href="products/cupcakes.html" class="case-item">
-      <img src="img/case55.jpg" alt="Капкейки" />
-      <div class="case-caption">Капкейки та мафіни</div>
-    </a>
-    <a href="products/bread.html" class="case-item">
-      <img src="img/case44.jpg" alt="Хліб" />
-      <div class="case-caption">Хліб на заквасці</div>
-    </a>
-  </div>
-</section>
-
-  <!-- CONTACT -->
-  <section class="contact fade-in" id="contact">
-    <h2>Зв’яжіться з нами</h2>
-    <form class="contact-form">
-      <input type="text" placeholder="Ваше ім’я" required />
-      <input type="email" placeholder="Ваш email" required />
-      <textarea rows="5" placeholder="Ваше повідомлення" required></textarea>
-      <button type="submit">Надіслати</button>
-    </form>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <p>&copy; 2025–<span id="year"></span> Смак Тістечка. Всі права захищено.</p>
-  </footer>
-
-  <button id="scrollToTop" title="Вгору">↑</button>
-  <script>
-    const scrollToTopBtn = document.getElementById("scrollToTop");
-  
-    window.onscroll = function () {
-      scrollToTopBtn.style.display = (window.scrollY > 100) ? "block" : "none";
-    };
-  
-    scrollToTopBtn.addEventListener("click", () => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-  </script>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
-
-  <script>
-    const fadeEls = document.querySelectorAll('.fade-in');
-  
-    const appearOnScroll = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
+    <script>
+      const scrollToTopBtn = document.getElementById("scrollToTop");
+      window.onscroll = function () {
+        scrollToTopBtn.style.display = (window.scrollY > 100) ? "block" : "none";
+      };
+      scrollToTopBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
       });
-    }, {
-      threshold: 0.1
-    });
-  
-    fadeEls.forEach(el => {
-      appearOnScroll.observe(el);
-    });
-  </script>
+    </script>
 
-</body>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+    <script>
+      const fadeEls = document.querySelectorAll('.fade-in');
+      const appearOnScroll = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.1 });
+
+      fadeEls.forEach(el => {
+        appearOnScroll.observe(el);
+      });
+    </script>
+  </body>
 </html>

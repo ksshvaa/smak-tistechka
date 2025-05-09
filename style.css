@@ -12,8 +12,6 @@ body {
   font-family: sans-serif;
   background-color: #111;
   color: #fff;
-  display: flex;
-  flex-direction: column;
 }
 
 main {
@@ -65,10 +63,9 @@ header {
   background-image: url("img/hero.jpg");
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  overflow: hidden;
 }
 
 .hero-content p {
@@ -80,16 +77,22 @@ header {
 
 /* Overlay для затемнення фону */
 .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 1;
 }
 
 /* Стилі hero-тексту */
 .hero-content {
+  position: relative;
+  z-index: 2;
   text-align: center;
   color: #fff;
   padding: 20px;
@@ -495,4 +498,14 @@ footer {
 
 .product-main {
   padding-top: 200px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.wrapper > footer {
+  margin-top: auto;
 }
